@@ -9,14 +9,14 @@ Welcome to the ultimate showdown of X’s and O’s! This repo holds the source 
 Think you've got what it takes? Let the Tic-Tac-Toe battles begin! Play the game here - https://ehsan-ashik.github.io/tic-tac-toe-unity-game/
 
 
-# Agent Intelligence 
+## Agent Intelligence 
 
 The AI agent's intelligence relies on the *Minimax Algorithm*, a strategy used to make optimal decisions in competitive games by simulating possible moves and choosing the one that minimizes potential loss while maximizing gain. In each game state, Minimax predicts all future moves to anticipate the opponent’s best responses, ensuring the AI picks the most favorable outcome.
 
 *Alpha-Beta Pruning* optimizes this by "pruning" or cutting off branches of moves that won’t affect the final decision, thus speeding up the process. It skips unnecessary checks by using two values — *alpha* (the best option for the maximizing player) and *beta* (for the minimizing player) — to avoid analyzing moves that won’t influence the outcome. This combination allows the AI agent to evaluate moves faster without compromising decision quality.
 
 
-# References
+## References
 
 1. Minmax algorithm - https://en.wikipedia.org/wiki/Minimax
 2. Alpha-Beta pruning - https://en.wikipedia.org/wiki/Alpha%E2%80%93beta_pruning 
