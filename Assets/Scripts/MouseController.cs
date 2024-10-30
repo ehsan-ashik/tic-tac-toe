@@ -54,12 +54,11 @@ public class MouseController : MonoBehaviour {
 	}
 	// Use this for initialization
 	void Start () {
-		XorO = MenuUIManagerScript.isToggleX;
-		difficulty = MenuUIManagerScript.difficulty;
-		//player_turn = true;
-		agentsFirstMove = !player_turn;
-		board_array = new int[3,3];
-		agent_board = new int[3,3];
+        //setting restart params
+        removeObjects = new List<GameObject>();
+		// restart and initialize params 
+		Restart();
+
 		heightInWorld = Camera.main.orthographicSize * 2.0f;
 		widthInWorld = heightInWorld / Screen.height * Screen.width;
 		Debug.Log ("World height and width: " + heightInWorld + " " + widthInWorld);
@@ -67,8 +66,6 @@ public class MouseController : MonoBehaviour {
 		//setting board params;
 		GameObject board = GameObject.FindGameObjectWithTag("board");
 		SpriteRenderer board_sr = board.GetComponent<SpriteRenderer> ();
-		//setting restart params
-		removeObjects = new List<GameObject> ();
 
 		//Debug.Log ("board width: " + );
 		boardMinX = board.transform.position.x - board_sr.sprite.bounds.size.x / 2.0f;

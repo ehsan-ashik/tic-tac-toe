@@ -7,7 +7,11 @@ public class UIManagerScript : MonoBehaviour {
 
 	public void RestartGame(){
 		MouseController.Restart();
-		//Application.LoadLevel (Application.loadedLevelName);
 	}
+
+	public void GoBack()
+	{
+        Application.LoadLevel("menu");
+    }
 
 }

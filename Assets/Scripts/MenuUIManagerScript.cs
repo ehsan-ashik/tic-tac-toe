@@ -85,6 +85,27 @@ public class MenuUIManagerScript : MonoBehaviour {
 			toggleUnbt.isOn = true;
 	}
 
+	public void UpdateDifficultyToggle()
+	{
+		if (difficulty == 1) {
+			toggleNormal.isOn = true;
+			toggleHard.isOn = toggleUnbt.isOn = false;
+		} else if (difficulty == 3) {
+            toggleHard.isOn = true;
+            toggleNormal.isOn = toggleUnbt.isOn = false;
+        } else {
+            toggleUnbt.isOn = true;
+            toggleHard.isOn = toggleNormal.isOn = false;
+        }
+	}
+
+	public void UpdatePlayWithToggle()
+	{
+
+		toggleX.isOn = isToggleX;
+		toggleO.isOn = !isToggleX;
+	}
+
 	public void Play(){
 		if (youToggle.isOn) {
 			MouseController.player_turn = true;
@@ -118,6 +139,8 @@ public class MenuUIManagerScript : MonoBehaviour {
 		btn_start.SetBool ("isHidden", true);
 		btn_settings.SetBool ("isHidden", true);
 		btn_exit.SetBool ("isHidden", true);
+		UpdateDifficultyToggle();
+		UpdatePlayWithToggle();
 	}
 
 	public void ClosePanelSettings(){
